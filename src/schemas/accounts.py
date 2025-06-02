@@ -1,15 +1,13 @@
-from pydantic import BaseModel, EmailStr, field_validator
+from pydantic import BaseModel, EmailStr, field_validator, ConfigDict
 
 from database import accounts_validators
 
 
 class BaseEmailPasswordSchema(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
     email: EmailStr
     password: str
 
-    model_config = {
-        "from_attributes": True
-    }
 
     @field_validator("email")
     @classmethod
