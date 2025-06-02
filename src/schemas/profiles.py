@@ -3,7 +3,7 @@ from fastapi import UploadFile, HTTPException
 from pydantic import BaseModel, field_validator, HttpUrl
 from starlette import status
 
-from database.utils.as_form import as_form
+from schemas.utils.as_form import as_form
 from validation import (
     validate_name,
     validate_image,
