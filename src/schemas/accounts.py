@@ -8,7 +8,6 @@ class BaseEmailPasswordSchema(BaseModel):
     email: EmailStr
     password: str
 
-
     @field_validator("email")
     @classmethod
     def validate_email(cls, value):
