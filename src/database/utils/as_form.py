@@ -16,7 +16,7 @@ def as_form(cls: type[BaseModel]):
 
         param = inspect.Parameter(
             field_name,
-            inspect.Parameter.POSITIONAL_ONLY,
+            inspect.Parameter.KEYWORD_ONLY,
             default=inspect.Parameter.empty,
             annotation=annotation,
         )
